@@ -1,0 +1,71 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(run data, Some(dd50e520-e17e-47b5-9ede-3549e0e5f27c), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / run[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/analyst/Desktop/Scala-project /target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mNon-compiled module 'compiler-bridge_2.13' for Scala 2.13.6. Compiling...[0m
+[0m[[0m[0minfo[0m] [0m[0m  Compilation completed in 6.653s.[0m
+[0m[[0m[31merror[0m] [0m[0m/home/analyst/Desktop/Scala-project /src/main/scala/main.scala:26:43: constructor cannot be instantiated to expected type;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : (T1, T2, T3, T4)[0m
+[0m[[0m[31merror[0m] [0m[0m required: SensorStatisticsTask.SensorStats[0m
+[0m[[0m[31merror[0m] [0m[0m        result.sensorStats.foreach { case (sensorId, min, avg, max) =>[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/analyst/Desktop/Scala-project /src/main/scala/main.scala:52:15: could not find implicit value for parameter materializer: akka.stream.Materializer[0m
+[0m[[0m[31merror[0m] [0m[0m      .runWith(Sink.seq)[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/analyst/Desktop/Scala-project /src/main/scala/main.scala:79:21: object ByteString is not a case class, nor does it have a valid unapply/unapplySeq member[0m
+[0m[[0m[31merror[0m] [0m[0m        case Vector(ByteString(sensorId), ByteString(humidityStr)) =>[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/analyst/Desktop/Scala-project /src/main/scala/main.scala:79:43: object ByteString is not a case class, nor does it have a valid unapply/unapplySeq member[0m
+[0m[[0m[31merror[0m] [0m[0m        case Vector(ByteString(sensorId), ByteString(humidityStr)) =>[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/analyst/Desktop/Scala-project /src/main/scala/main.scala:90:48: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : scala.collection.immutable.Map[String,(Option[Int], Int, Option[Int])][0m
+[0m[[0m[31merror[0m] [0m[0m required: Seq[SensorStatisticsTask.SensorStats][0m
+[0m[[0m[31merror[0m] [0m[0m      .fold(ProcessingResult(1, 0, 0, Map.empty[String, (Option[Int], Int, Option[Int])])) {[0m
+[0m[[0m[31merror[0m] [0m[0m                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/analyst/Desktop/Scala-project /src/main/scala/main.scala:92:43: value sensorStats is not a member of Any[0m
+[0m[[0m[31merror[0m] [0m[0m          val (minOpt, sum, maxOpt) = acc.sensorStats.getOrElse(sensorId, (None, 0, None))[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/analyst/Desktop/Scala-project /src/main/scala/main.scala:93:31: value fold is not a member of Any[0m
+[0m[[0m[31merror[0m] [0m[0m          val newMin = minOpt.fold(humidityOpt)(min => Some(Math.min(min, humidityOpt.getOrElse(min))))[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/analyst/Desktop/Scala-project /src/main/scala/main.scala:93:87: value getOrElse is not a member of Any[0m
+[0m[[0m[31merror[0m] [0m[0m          val newMin = minOpt.fold(humidityOpt)(min => Some(Math.min(min, humidityOpt.getOrElse(min))))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/analyst/Desktop/Scala-project /src/main/scala/main.scala:94:31: value fold is not a member of Any[0m
+[0m[[0m[31merror[0m] [0m[0m          val newMax = maxOpt.fold(humidityOpt)(max => Some(Math.max(max, humidityOpt.getOrElse(max))))[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/analyst/Desktop/Scala-project /src/main/scala/main.scala:94:87: value getOrElse is not a member of Any[0m
+[0m[[0m[31merror[0m] [0m[0m          val newMax = maxOpt.fold(humidityOpt)(max => Some(Math.max(max, humidityOpt.getOrElse(max))))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/analyst/Desktop/Scala-project /src/main/scala/main.scala:95:42: value getOrElse is not a member of Any[0m
+[0m[[0m[31merror[0m] [0m[0m          val newSum = sum + humidityOpt.getOrElse(0)[0m
+[0m[[0m[31merror[0m] [0m[0m                                         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/analyst/Desktop/Scala-project /src/main/scala/main.scala:96:30: value numMeasurements is not a member of Any[0m
+[0m[[0m[31merror[0m] [0m[0m          val newCount = acc.numMeasurements + 1[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/analyst/Desktop/Scala-project /src/main/scala/main.scala:97:48: value isEmpty is not a member of Any[0m
+[0m[[0m[31merror[0m] [0m[0m          val newFailedCount = if (humidityOpt.isEmpty) acc.numFailedMeasurements + 1 else acc.numFailedMeasurements[0m
+[0m[[0m[31merror[0m] [0m[0m                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/analyst/Desktop/Scala-project /src/main/scala/main.scala:97:61: value numFailedMeasurements is not a member of Any[0m
+[0m[[0m[31merror[0m] [0m[0m          val newFailedCount = if (humidityOpt.isEmpty) acc.numFailedMeasurements + 1 else acc.numFailedMeasurements[0m
+[0m[[0m[31merror[0m] [0m[0m                                                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/analyst/Desktop/Scala-project /src/main/scala/main.scala:97:96: value numFailedMeasurements is not a member of Any[0m
+[0m[[0m[31merror[0m] [0m[0m          val newFailedCount = if (humidityOpt.isEmpty) acc.numFailedMeasurements + 1 else acc.numFailedMeasurements[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/analyst/Desktop/Scala-project /src/main/scala/main.scala:98:36: value sensorStats is not a member of Any[0m
+[0m[[0m[31merror[0m] [0m[0m          val newSensorStats = acc.sensorStats + (sensorId -> (newMin, newSum, newMax))[0m
+[0m[[0m[31merror[0m] [0m[0m                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/analyst/Desktop/Scala-project /src/main/scala/main.scala:99:32: value numFiles is not a member of Any[0m
+[0m[[0m[31merror[0m] [0m[0m          ProcessingResult(acc.numFiles, newCount, newFailedCount, newSensorStats)[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/analyst/Desktop/Scala-project /src/main/scala/main.scala:79:20: fruitless type test: a value of type List[akka.util.ByteString] cannot also be a scala.collection.immutable.Vector[A][0m
+[0m[[0m[33mwarn[0m] [0m[0m        case Vector(ByteString(sensorId), ByteString(humidityStr)) =>[0m
+[0m[[0m[33mwarn[0m] [0m[0m                   ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0m17 errors found[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 11 s, completed 21 Sep, 2023 1:22:44 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
+[0m[[0m[0minfo[0m] [0m[0mshutting down sbt server[0m

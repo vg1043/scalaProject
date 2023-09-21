@@ -1,0 +1,11 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /home/analyst/Desktop/Scala-project /target/scala-2.13/sensorstatistics_2.13-0.1.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SensorStatistics$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/analyst/Desktop/Scala-project /target/scala-2.13/classes/SensorStatistics$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SensorStatistics$SensorStats$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/analyst/Desktop/Scala-project /target/scala-2.13/classes/SensorStatistics$SensorStats$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SensorStatistics$SensorStats.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/analyst/Desktop/Scala-project /target/scala-2.13/classes/SensorStatistics$SensorStats.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SensorStatistics.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/analyst/Desktop/Scala-project /target/scala-2.13/classes/SensorStatistics.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
